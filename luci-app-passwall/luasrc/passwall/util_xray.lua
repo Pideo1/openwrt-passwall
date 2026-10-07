@@ -143,10 +143,6 @@ function gen_outbound(flag, node, tag, proxy_table)
 			node.finalmask = nil
 		end
 
-		if node.protocol == "http" and node.stream_security == "tls" then
-			node.transport = "raw"
-		end
-
 		if remarks then
 			tag = tag .. ":" .. remarks
 		end
@@ -594,8 +590,6 @@ function gen_config_server(node)
 			allowTransparent = false,
 			users = users
 		}
-		node.transport = "raw"
-		node.tcp_guise = "none"
 	elseif node.protocol == "shadowsocks" then
 		settings = {
 			method = node.method,

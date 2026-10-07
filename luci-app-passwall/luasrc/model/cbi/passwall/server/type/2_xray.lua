@@ -376,6 +376,7 @@ o:depends({ protocol = "vmess" })
 o:depends({ protocol = "vless" })
 o:depends({ protocol = "shadowsocks" })
 o:depends({ protocol = "trojan" })
+o:depends({ protocol = "http" })
 
 -- [[ WebSocket部分 ]]--
 
